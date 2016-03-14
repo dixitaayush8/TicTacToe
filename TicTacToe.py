@@ -15,8 +15,18 @@ def inputLetters(): #inputs letters that player 1 and 2 choose.
         t = 'Y'
     elif p == 'Y':
         t = 'X'
-    print 'Player 2, you are ' + t
-    return p, t   
+    else:
+        while (p != 'X' or p != 'Y') and (t != 'X' or t != 'Y'):
+            t = ''
+            p = str(raw_input('Player 1, Choose a letter (X or Y): '))
+            if p == 'X':
+                t = 'Y'
+                print 'Player 2, you are ' + t
+                return p, t
+            elif p == 'Y':
+                t = 'X'
+                print 'Player 2, you are ' + t
+                return p, t
 
 def playerOneMove(bList, letter): #Player 1 chooses a move
     num = int(raw_input('Player 1, make a move (0-8): ' ))
