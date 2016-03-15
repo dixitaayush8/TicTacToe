@@ -27,6 +27,8 @@ def inputLetters(): #inputs letters that player 1 and 2 choose.
                 t = 'X'
                 print 'Player 2, you are ' + t
                 return p, t
+    print 'Player 2, you are ' + t
+    return p, t
 
 def playerOneMove(bList, letter): #Player 1 chooses a move
     num = int(raw_input('Player 1, make a move (0-8): ' ))
